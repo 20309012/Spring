@@ -15,9 +15,7 @@ import java.util.Set;
 @Entity
 @SequenceGenerator(name = "  sequence-Genarat",initialValue = 1,sequenceName = "office-sequnce")
 public class Office extends Abstrackpersistance implements Serializable {
-//    @Id
-//    @GeneratedValue (strategy = GenerationType.SEQUENCE)
-//    Long id;
+
     String name;
 
     @Temporal(TemporalType.DATE)
@@ -36,13 +34,7 @@ public class Office extends Abstrackpersistance implements Serializable {
 
 
 
-//    public Long getId() {
-//        return id;
-//    }
-//
-//    public void setId(Long id) {
-//        this.id = id;
-//    }
+
 
     public String getName() {
         return name;

@@ -11,14 +11,14 @@ import java.math.BigDecimal;
 public class SavingAccountDto implements Serializable {
     private String accuntNumber;
     private String exterlId;
-  //  @Enumerated(EnumType.STRING)
+
     private SavingsAccuntStatuseType statuse;
-    //    @Column(name = "nominalannualinterestrate",scale = 6,precision = 19,nullable = false)
+
     private BigDecimal nominalAnnalInterestRate;
-    //   @Column(name = "minrequiredopeningbalance",scale = 6,precision = 19,nullable = false)
+
     private BigDecimal minReqequingBalance;
     private Long clintId;
-    // @Column(name = "accontblancedriver",scale = 6,precision = 12,nullable = false)
+
     private BigDecimal accountBalance=BigDecimal.ZERO;
 
     public Long getClintId() {

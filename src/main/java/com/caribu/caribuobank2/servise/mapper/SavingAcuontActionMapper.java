@@ -8,15 +8,9 @@ import org.mapstruct.Mapping;
 
 @Mapper(componentModel = "spring",uses = {})
 public interface SavingAcuontActionMapper {
-   // @Mapping(source = " SavingAcuontAction ",target ="savingAconttransacsion")
+    @Mapping(source = " SavingAcuontAction ",target ="savingAconttransacsion")
     SavingAcuontActionDto toDto(SavingAcuontAction savingAcuontAction);
-   // @Mapping(source = " savingAconttransacsionType ",target ="savingAconttransacsion")
+   @Mapping(source = " savingAconttransacsionType ",target ="savingAconttransacsion")
     SavingAcuontAction toEntity(SavingAcuontActionDto savingAcuontActionDto);
-   // default SavingAcuontAction fromId(Long id) {
 
-//        if(id==null) {return null;}
-//        SavingAcuontAction  SavingAcuontAction=new SavingAcuontAction();
-//        SavingAcuontAction .setId(id);
-//        return SavingAcuontAction;
-//    }
 }

@@ -5,15 +5,15 @@ import jakarta.persistence.*;
 import java.io.Serializable;
 import java.math.BigDecimal;
 @Entity
-//@SequenceGenerator(name = "sequence-generator",initialValue = 1,sequenceName = "savingsAccount-sequence")
+
 public class SavingsAccunt extends Abstrackpersistance implements Serializable {
     private String accuntNumber;
     private String exterlId;
     @Enumerated(EnumType.STRING)
     private SavingsAccuntStatuseType statuse;
-//    @Column(name = "nominalannualinterestrate",scale = 6,precision = 19,nullable = false)
+
     private BigDecimal nominalAnnalInterestRate;
- //   @Column(name = "minrequiredopeningbalance",scale = 6,precision = 19,nullable = false)
+
   private BigDecimal minReqequingBalance;
     @Column(name = "accontblancedriver",nullable = false)
     private BigDecimal accountBalance=BigDecimal.ZERO;

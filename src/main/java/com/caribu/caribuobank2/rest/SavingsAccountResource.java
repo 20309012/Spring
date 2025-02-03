@@ -32,7 +32,7 @@ public class SavingsAccountResource {
     @GetMapping("/get")
     public List<SavingAccountDto> getAccounts() {
      return accountServise.findAll();
-// return accountRepository.findAll();
+
 
 
     }

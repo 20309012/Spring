@@ -12,7 +12,7 @@ import java.math.BigDecimal;
 import java.util.Date;
 @Mapper
 public class SavingAcuontActionDto  implements Serializable {
-   // @Enumerated(EnumType.STRING)
+
     private SavingAconttransacsionType savingAconttransacsionType;
     private Date dateof;
     private BigDecimal amount;

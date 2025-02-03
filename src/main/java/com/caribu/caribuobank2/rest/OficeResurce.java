@@ -24,7 +24,7 @@ import java.util.Optional;
 @RestController
 @Controller
 public class OficeResurce {
- //   private final Logger log = (Logger) LoggerFactory.getLogger(OficeResurce.class);
+
 
 private final OfficeServise officeServise;
 //@Value("${caribo.clintApp.name}")
@@ -44,40 +44,17 @@ private static final String EntityName="Office";
     public ResponseEntity <OfficDto> createOffice(@Valid @RequestBody OfficDto officeDto ) throws URISyntaxException {
         OfficDto result= officeServise.Save(officeDto);
 
-  ///  public  ResponseEntity<Office> creat(@RequestBody Office office) throws URISyntaxException {
-      //  Office result = officRepository.save(office);
+
         return    ResponseEntity.created(new URI("/office" + result.getId())).headers(HeaderUti.createEntity(applicationName, true, EntityName, result.getId().toString()))
                 .body(result);
 
     }
-//@PutMapping("/port/{id}")
-//public OfficDto updateOffice(  @RequestBody OfficDto officeDto ,@PathVariable long id ) {
-//        //throws BadRequestException {
-////        if(officeDto.getId()==null){
-////            throw new BadRequestException("Office id is required");
-////        }
-////        if(!officeServise.exsistByid(officeDto.getId())){
-////            throw new BadRequestException("Office not foundby id");
-////        }
-//
-//        OfficDto result= officeServise.updete(officeDto,id);
-//        return result;
-//
-//}
+
 
 @PutMapping("/org/{id}")
 public  OfficDto updeteOffice( @PathVariable long id ,@RequestBody OfficDto officeDto ) throws BadRequestException {
   return   officeServise.put(id, officeDto);
-//        if(officeDto.getId()==null){
-//            throw new BadRequestException("ای دی موجود نیست");
-//        }
-//        if(!officeServise.exsistByid(officeDto.getId())){
-//
-//            throw new BadRequestException("Office already exists");
-//        }
-//
-//     OfficDto result=   officeServise.put(id,officeDto);
-//      return result;
+
 }
 
 
@@ -93,7 +70,7 @@ public  OfficDto updeteOffice( @PathVariable long id ,@RequestBody OfficDto offi
 
 
 
-      // Optional<OfficDto>officDto=officeServise.findone(id);
+
     Optional<OfficDto>officDto=officeServise.findByid(id);
 if(officDto.isPresent()){
     return ResponseEntity.ok(officDto.get());
@@ -101,7 +78,7 @@ if(officDto.isPresent()){
 else {
     return ResponseEntity.notFound().build();
 }
-      //   return ResponseUtil.wrapOrNotFound(officDto);
+
 
 
 }
@@ -115,4 +92,4 @@ else {
 }
 
 
-//}
+

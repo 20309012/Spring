@@ -47,7 +47,7 @@ else {
       @DeleteMapping("/delete/{id}")
     public void delety(@PathVariable Long id) {
         clientServise.deletById(id);
-      //  return null;
+
       }
 
 }
