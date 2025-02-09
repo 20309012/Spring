@@ -62,7 +62,7 @@ public class LoanService {
 
         Loan loan1=loanRipositor.findById(id).orElseThrow();
         Loan loan=loanMaper.ToEntity(loanDto);
-      //  loan1.setBook(loan.getBook());
+
 
         loan1.setReturnDate(loan.getReturnDate());
         loan1.setLoanDate(loan.getLoanDate());

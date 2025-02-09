@@ -6,14 +6,14 @@ import lombok.RequiredArgsConstructor;
 
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.http.ResponseEntity;
-///import org.springframework.security.access.prepost.PreAuthorize;
+
 import org.springframework.web.bind.annotation.*;
 
 import java.util.List;
 
 @RestController
 @RequestMapping("/api/loan")
-//@RequiredArgsConstructor
+
 public class LoanContolorel {
 
     private LoanService loanServise;
@@ -23,7 +23,7 @@ public class LoanContolorel {
     }
 
     @PostMapping("post")
-  //  @PreAuthorize("hasRole('ADMIN')")
+
     public ResponseEntity<LoanDto>create(@RequestBody LoanDto loanDto){
         LoanDto loanDto1=loanServise.createLoan(loanDto);
         return ResponseEntity.ok(loanDto1);

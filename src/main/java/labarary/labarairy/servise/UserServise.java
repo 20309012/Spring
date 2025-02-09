@@ -76,7 +76,7 @@ public class UserServise {
             if (userRepository.findByRole("admin").isPresent()) {
                 User admin = new User();
                 admin.setUsername("admin");
-                //  admin.setPasword();
+
 
             }
         }
